@@ -15,3 +15,4 @@ services:
 
 volumes:
   junt-ai-backend:
+    name: junt-ai-backend

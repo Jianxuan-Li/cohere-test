@@ -6,5 +6,7 @@ down:
 	@cd frontend && make down
 
 clean:
+	@cd backend && make down
+	@cd frontend && make down
 	@cd backend && make clean
 	@cd frontend && make clean
