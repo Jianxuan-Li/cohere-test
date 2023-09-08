@@ -23,17 +23,21 @@ Note:
 
 ## How to run
 
-* Docker installed
 
+Requirements:
+
+* Docker installed (Windows WSL2 / Mac / Linux)
+* create `backend/.env` file, save the API key of Cohere embedding API as `COHERE_API_KEY=your_api_key`
+
+e.g.
 ```
-make up
+echo "COHERE_API_KEY=your_api_key" > backend/.env
 ```
 
-to remove all the containers, images, and volumes, run
+Commands:
 
-```
-make clean
-```
+* Start dev server: `make up`
+* Stop and remove data: `make clean`
 
 [http://localhost:8000/docs#/](http://localhost:8000/docs#/) to see the swagger UI of the backend API
 [http://localhost:3000/](http://localhost:3000/) to see the frontend UI

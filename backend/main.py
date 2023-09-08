@@ -6,7 +6,7 @@ import cohere
 import numpy as np
 import os
 
-co = cohere.Client(os.getenv("COHERE_KEY"))
+co = cohere.Client(os.getenv("COHERE_API_KEY"))
 
 
 def calculate_similarity(val_a, val_b):

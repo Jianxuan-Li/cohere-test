@@ -1,5 +1,9 @@
 .PHONY: run
 run:
+	@if [ ! -f backend/.env ]; then \
+		echo "backend/.env does not exist"; \
+		exit 1; \
+	fi
 	@docker -v > /dev/null 2>&1 || (echo "Docker is not installed" && exit 1)
 	@docker-compose -v > /dev/null 2>&1 || (echo "Docker-compose is not installed" && exit 1)
 	@docker info > /dev/null 2>&1 || (echo "Docker is not running" && exit 1)

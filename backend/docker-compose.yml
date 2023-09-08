@@ -4,6 +4,8 @@ services:
   junt-ai-backend:
     image: docker.io/freeyeti/dev-in-docker:python3.11-poetry1.5.1-gdal-dev
     container_name: junt-ai-backend
+    env_file:
+      - .env
     environment:
       - IN_CONTAINER=yes
     ports:
