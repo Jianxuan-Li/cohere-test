@@ -40,4 +40,5 @@ Commands:
 * Stop and remove data: `make clean`
 
 [http://localhost:8000/docs#/](http://localhost:8000/docs#/) to see the swagger UI of the backend API
+
 [http://localhost:3000/](http://localhost:3000/) to see the frontend UI
