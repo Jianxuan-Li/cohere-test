@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "junt-ai-backend"
+version = "0.1.0"
+description = ""
+authors = ["Jianxuan(Jack) Li"]
+license = "MIT"
+readme = "README.md"
+packages = []
+
+[tool.poetry.dependencies]
+python = "^3.11"
+cohere = "^4.24"
+numpy = "^1.25.2"
+fastapi = {extras = ["all"], version = "^0.103.1"}
+
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^2.17.5"
+black = "^23.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

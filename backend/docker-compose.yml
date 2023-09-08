@@ -1,0 +1,17 @@
+version: "3.5"
+
+services:
+  junt-ai-backend:
+    image: docker.io/freeyeti/dev-in-docker:python3.11-poetry1.5.1-gdal-dev
+    container_name: junt-ai-backend
+    environment:
+      - IN_CONTAINER=yes
+    ports:
+      - "0.0.0.0:8000:8000"
+    volumes:
+      - ../backend:/code
+      - junt-ai-backend:/root/.cache/pypoetry
+    command: poetry run uvicorn main:app --reload --host 0.0.0.0 --port 8000
+
+volumes:
+  junt-ai-backend:

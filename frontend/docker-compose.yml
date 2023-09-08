@@ -1,0 +1,13 @@
+version: "3.5"
+
+services:
+  junt-ai-frontend:
+    image: node:18
+    container_name: junt-ai-frontend
+    environment:
+      - IN_CONTAINER=yes
+    ports:
+      - "0.0.0.0:3000:3000"
+    volumes:
+      - ../frontend:/code
+    command: bash -c "cd /code && npm install && npm run dev"
